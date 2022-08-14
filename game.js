@@ -89,8 +89,6 @@ class FindNum {
 		new levelSize(5, 5)
 	]
 
-
-
 	gameProcess() {
 		this.table.innerHTML = "";
 		let rows, columns;
@@ -129,7 +127,6 @@ class FindNum {
 		btns.forEach((btn) => {
 			// Вешаем событие клик
 			btn.addEventListener('click', (e) => {
-				console.log(this.target)
 				let txt = btn.textContent || btn.innerText;
 				if (txt == this.target) {
 					this.currLvl++;
@@ -163,8 +160,6 @@ class FindNum {
 
 	startGame() {
 		var timer = setInterval(() => {
-			// console.log(this.currLvl)
-			let seconds = this.time // Получаем секунды
 			if (this.time <= 0) {
 				clearInterval(timer);
 			}
